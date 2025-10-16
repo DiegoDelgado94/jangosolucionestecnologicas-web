@@ -5,133 +5,181 @@
   <title>JanGo | Soluciones Tecnológicas Integrales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <style>
-    /* ----- ESTILO GENERAL ----- */
+    /* (Todo tu CSS anterior se mantiene igual) */
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background: #0A192F; 
-      background: linear-gradient(to right, #0A192F, #193154); 
       color: #FFFFFF; 
       text-align: center;
+      overflow-x: hidden;
+      background-color: #0A192F; 
+      background-image: linear-gradient(to right, #0A192F, #193154);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: scroll; 
     }
+    @media (min-width: 768px) {
+      body {
+        background-image: url('fondo-pc.jpg');
+        background-attachment: fixed;
+      }
+    }
+    .container { padding: 0 15px; }
+    .animated { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+    .logo { animation-delay: 0.1s; }
+    .main-title { animation-delay: 0.3s; }
+    .subtitle { animation-delay: 0.5s; }
+    .button-container { animation-delay: 0.7s; }
+    @keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .logo img { margin-top: 40px; width: 250px; transition: transform 0.4s ease; }
+    .logo img:hover { transform: scale(1.05); }
+    h1.main-title { font-size: 28px; color: #FFFFFF; font-weight: 700; margin: 25px 15px 15px; text-shadow: none; }
+    p.subtitle { font-size: 17px; color: #cccccc; font-weight: 600; margin: 10px 15px 30px; max-width: 400px; margin-left: auto; margin-right: auto; }
+    .button { display: flex; align-items: center; justify-content: center; gap: 10px; background: #0A192F; color: #FFFFFF; text-decoration: none; font-size: 17px; margin: 14px auto; padding: 14px 20px; width: 85%; max-width: 340px; border-radius: 50px; border: 1px solid #00BFFF; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: all 0.3s ease; }
+    .button:hover { background: #00BFFF; color: #0A192F; transform: scale(1.04); box-shadow: 0 0 16px #00BFFF; }
+    .button.contact { background: #00BFFF; color: #0A192F; font-weight: 700; }
+    .button.contact:hover { background: #FFFFFF; }
+    .why-us { margin-top: 80px; padding-bottom: 50px; }
+    .why-us h2 { font-size: 24px; font-weight: 700; margin-bottom: 40px; }
+    .features-container { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+    .feature { background: rgba(25, 49, 84, 0.5); padding: 25px; border-radius: 15px; width: 250px; border: 1px solid #193154; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .feature:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+    .feature i { font-size: 40px; color: #00BFFF; margin-bottom: 15px; }
+    .feature h3 { font-size: 18px; font-weight: 600; margin: 0 0 10px 0; }
+    .feature p { font-size: 15px; color: #cccccc; line-height: 1.6; margin: 0; }
+    footer { padding: 20px; font-size: 15px; background: #193154; color: #FFFFFF; }
+    @media (max-width: 480px) { .logo img { width: 200px; } h1.main-title { font-size: 24px; } .button { font-size: 15px; padding: 12px 18px; } .why-us h2 { font-size: 22px; } .feature { width: 80%; } }
+    .highlight { color: #00BFFF; }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-2px) rotate(-3deg); } 75% { transform: translateX(2px) rotate(3deg); } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    @keyframes grow { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.15); } }
+    .button .fas, .button .fab { transition: transform 0.3s ease; }
+    .button:hover .fa-cogs { animation: spin 2s linear infinite; }
+    .button:hover .fa-tools { animation: shake 0.5s ease; }
+    .button:hover .fa-desktop { animation: pulse 0.6s ease; }
+    .button:hover .fa-shield-alt { animation: grow 0.5s ease; }
+    .button:hover .fa-whatsapp { animation: shake 0.5s ease; }
 
-    /* ----- ESTILOS DEL LOGO ----- */
-    .logo img {
-      margin-top: 40px;
-      width: 250px; 
-      transition: transform 0.4s ease;
+    /* --- INICIO: ESTILOS PARA EL NUEVO FORMULARIO DE CONTACTO --- */
+    .contact-form-section {
+        padding: 60px 0;
+        margin-top: 40px;
     }
-
-    .logo img:hover {
-      transform: scale(1.05);
+    .contact-form-section h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 10px;
     }
-    
-    /* ----- TÍTULO PRINCIPAL ----- */
-    h1.main-title {
-      font-size: 28px;
-      color: #FFFFFF;
-      font-weight: 700;
-      margin: 25px 15px 15px;
-      text-shadow: none; /* Se quita el brillo para un look más limpio */
+    .contact-form-section .subtitle-form {
+        color: #cccccc;
+        margin-bottom: 40px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    /* ----- SUBTÍTULO ----- */
-    p.subtitle {
-      font-size: 17px;
-      color: #cccccc; 
-      font-weight: 600;
-      margin: 10px 15px 30px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+    .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: left;
     }
-
-    /* ----- BOTONES DE SERVICIOS ----- */
-    .button {
-      display: block;
-      background: #0A192F;
-      color: #FFFFFF; 
-      text-decoration: none;
-      font-size: 17px;
-      margin: 14px auto;
-      padding: 14px 20px;
-      width: 85%;
-      max-width: 340px;
-      border-radius: 50px;
-      border: 1px solid #00BFFF; 
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
+    .form-group {
+        margin-bottom: 20px;
     }
-
-    .button:hover {
-      background: #00BFFF;
-      color: #0A192F;
-      transform: scale(1.04);
-      box-shadow: 0 0 16px #00BFFF;
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
     }
-    
-    /* ESTILO ESPECIAL PARA EL BOTÓN DE CONTACTO */
-    .button.contact {
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        background: rgba(25, 49, 84, 0.7);
+        border: 1px solid #193154;
+        border-radius: 8px;
+        color: #FFFFFF;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 16px;
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    }
+    .form-group textarea {
+        resize: vertical; /* Permite al usuario ajustar la altura */
+        min-height: 120px;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+        outline: none;
+        border-color: #00BFFF;
+        box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+    }
+    .submit-button {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 50px;
         background: #00BFFF;
         color: #0A192F;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 18px;
         font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
-    .button.contact:hover {
+    .submit-button:hover {
         background: #FFFFFF;
+        transform: scale(1.02);
     }
-
-    /* ----- FOOTER ----- */
-    footer {
-      margin-top: 80px;
-      padding: 20px;
-      font-size: 15px;
-      background: #193154;
-      color: #FFFFFF;
-    }
-
-    /* ----- AJUSTES PARA MÓVILES ----- */
-    @media (max-width: 480px) {
-      .logo img {
-        width: 200px;
-      }
-      
-      h1.main-title {
-        font-size: 24px;
-      }
-
-      .button {
-        font-size: 15px;
-        padding: 12px 18px;
-      }
-    }
-    
-    /* ----- NUEVO ESTILO PARA RESALTAR TEXTO ----- */
-    .highlight {
-      color: #00BFFF; /* El color cian de tu marca */
-    }
+    /* --- FIN: ESTILOS PARA EL NUEVO FORMULARIO DE CONTACTO --- */
   </style>
 </head>
 
 <body>
-
-  <div class="logo">
-    <img src="jango-logo-blanco.png" alt="Logo de JanGo">
+<div class="container">
+  <div class="logo animated"> <img src="jango-logo-blanco.png" alt="Logo de JanGo"> </div>
+  <h1 class="main-title animated">Tu <span class="highlight">Aliado</span> Tecnológico</h1>
+  <p class="subtitle animated"> Soluciones tecnológicas integrales para tu negocio. </p>
+  <div class="button-container animated">
+      <a href="servicios.html" class="button"><i class="fas fa-cogs"></i>Conoce mis Servicios</a>
+      <a href="soporte-ti.html" class="button"><i class="fas fa-tools"></i>Soporte Técnico y Mantenimiento</a>
+      <a href="presencia-web.html" class="button"><i class="fas fa-desktop"></i>Presencia Web y Catálogos Digitales</a>
+      <a href="seguridad.html" class="button"><i class="fas fa-shield-alt"></i>Seguridad Digital Preventiva</a>
+      <a href="https://wa.me/573128547299?text=Hola,%20me%20gustar%C3%ADa%saber%20m%C3%A1s%20de%20tus%20servicios." class="button contact"><i class="fab fa-whatsapp"></i>Hablemos por WhatsApp</a>
   </div>
+  <section class="why-us">
+      <h2>¿Por qué elegir <span class="highlight">JanGo</span>?</h2>
+      <div class="features-container">
+          <div class="feature"> <i class="fas fa-bolt"></i> <h3>Soporte Rápido</h3> <p>Respuestas y soluciones eficientes para que tu negocio nunca se detenga.</p> </div>
+          <div class="feature"> <i class="fas fa-lock"></i> <h3>Seguridad Garantizada</h3> <p>Protegemos tu activo más valioso: tu información y la de tus clientes.</p> </div>
+          <div class="feature"> <i class="fas fa-lightbulb"></i> <h3>Soluciones Modernas</h3> <p>Implementamos tecnología de vanguardia para darte una ventaja competitiva.</p> </div>
+      </div>
+  </section>
 
-  <h1 class="main-title">Tu <span class="highlight">Aliado</span> Tecnológico</h1>
-
-  <p class="subtitle">
-    Soluciones tecnológicas integrales para tu negocio.
-  </p>
-
-  <a href="servicios.html" class="button">Conoce mis Servicios</a>
-  <a href="soporte-ti.html" class="button">Soporte Técnico y Mantenimiento</a>
-  <a href="presencia-web.html" class="button">Presencia Web y Catálogos Digitales</a>
-  <a href="seguridad.html" class="button">Seguridad Digital Preventiva</a>
-  <a href="https://wa.me/573128547299?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20de%20tus%20servicios." class="button contact">Hablemos por WhatsApp</a>
+  <section class="contact-form-section">
+      <h2>¿Listo para empezar tu <span class="highlight">Proyecto</span>?</h2>
+      <p class="subtitle-form">Envíame un mensaje y te responderé lo antes posible para discutir cómo podemos trabajar juntos.</p>
+      
+      <form class="contact-form" name="contacto" method="POST" data-netlify="true">
+          <div class="form-group">
+              <label for="name">Tu Nombre:</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Tu Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">¿Cómo puedo ayudarte?</label>
+              <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Enviar Mensaje</button>
+      </form>
+  </section>
+  </div>
 
   <footer>
     &copy; 2025 JanGo Soluciones Tecnológicas
