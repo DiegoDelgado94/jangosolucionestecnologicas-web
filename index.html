@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>JanGo | Soluciones Tecnológicas Integrales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ----- ESTILO GENERAL ----- */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #0A192F; 
+      background: linear-gradient(to right, #0A192F, #193154); 
+      color: #FFFFFF; 
+      text-align: center;
+    }
+
+    /* ----- ESTILOS DEL LOGO ----- */
+    .logo img {
+      margin-top: 40px;
+      width: 250px; 
+      transition: transform 0.4s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* ----- TÍTULO PRINCIPAL ----- */
+    h1.main-title {
+      font-size: 28px;
+      color: #FFFFFF;
+      font-weight: 700;
+      margin: 25px 15px 15px;
+      text-shadow: none; /* Se quita el brillo para un look más limpio */
+    }
+
+    /* ----- SUBTÍTULO ----- */
+    p.subtitle {
+      font-size: 17px;
+      color: #cccccc; 
+      font-weight: 600;
+      margin: 10px 15px 30px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ----- BOTONES DE SERVICIOS ----- */
+    .button {
+      display: block;
+      background: #0A192F;
+      color: #FFFFFF; 
+      text-decoration: none;
+      font-size: 17px;
+      margin: 14px auto;
+      padding: 14px 20px;
+      width: 85%;
+      max-width: 340px;
+      border-radius: 50px;
+      border: 1px solid #00BFFF; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: #00BFFF;
+      color: #0A192F;
+      transform: scale(1.04);
+      box-shadow: 0 0 16px #00BFFF;
+    }
+    
+    /* ESTILO ESPECIAL PARA EL BOTÓN DE CONTACTO */
+    .button.contact {
+        background: #00BFFF;
+        color: #0A192F;
+        font-weight: 700;
+    }
+    .button.contact:hover {
+        background: #FFFFFF;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      margin-top: 80px;
+      padding: 20px;
+      font-size: 15px;
+      background: #193154;
+      color: #FFFFFF;
+    }
+
+    /* ----- AJUSTES PARA MÓVILES ----- */
+    @media (max-width: 480px) {
+      .logo img {
+        width: 200px;
+      }
+      
+      h1.main-title {
+        font-size: 24px;
+      }
+
+      .button {
+        font-size: 15px;
+        padding: 12px 18px;
+      }
+    }
+    
+    /* ----- NUEVO ESTILO PARA RESALTAR TEXTO ----- */
+    .highlight {
+      color: #00BFFF; /* El color cian de tu marca */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="logo">
+    <img src="jango-logo-blanco.png" alt="Logo de JanGo">
+  </div>
+
+  <h1 class="main-title">Tu <span class="highlight">Aliado</span> Tecnológico</h1>
+
+  <p class="subtitle">
+    Soluciones tecnológicas integrales para tu negocio.
+  </p>
+
+  <a href="servicios.html" class="button">Conoce mis Servicios</a>
+  <a href="soporte-ti.html" class="button">Soporte Técnico y Mantenimiento</a>
+  <a href="presencia-web.html" class="button">Presencia Web y Catálogos Digitales</a>
+  <a href="seguridad.html" class="button">Seguridad Digital Preventiva</a>
+  <a href="https://wa.me/573128547299?text=Hola,%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20de%20tus%20servicios." class="button contact">Hablemos por WhatsApp</a>
+
+  <footer>
+    &copy; 2025 JanGo Soluciones Tecnológicas
+  </footer>
+
+</body>
+</html>
