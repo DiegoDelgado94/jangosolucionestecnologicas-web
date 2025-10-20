@@ -2,41 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Presencia Web | JanGo Soluciones Tecnológicas</title>
+  <title>Presencia Web | JanGo Soluciones Tecnol&oacute;gicas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    /* --- INICIO: CÓDIGO DEL FONDO CORREGIDO --- */
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      color: #FFFFFF; 
-      text-align: center;
-      overflow-x: hidden;
-
-      background-color: #0A192F; 
-      background-image: linear-gradient(to right, #0A192F, #193154);
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-attachment: scroll; 
-    }
-    @media (min-width: 768px) {
-      body {
-        background-image: 
-            linear-gradient(to bottom, rgba(10, 25, 47, 0.6) 0%, transparent 40%),
-            url('fondo-pc.jpg');
-        background-attachment: fixed;
-      }
-    }
-    /* --- FIN: CÓDIGO DEL FONDO CORREGIDO --- */
-    
+    body { margin: 0; font-family: 'Quicksand', sans-serif; color: #FFFFFF; text-align: center; overflow-x: hidden; background-color: #0A192F; background-image: linear-gradient(to right, #0A192F, #193154); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: scroll; }
+    @media (min-width: 768px) { body { background-image: linear-gradient(to bottom, rgba(10, 25, 47, 0.6) 0%, transparent 40%), url('fondo-pc.jpg'); background-attachment: fixed; } }
     .logo img { margin-top: 40px; width: 200px; transition: transform 0.4s ease; }
     .logo img:hover { transform: scale(1.05); }
     .button.contact { display: inline-block; background: #00BFFF; color: #0A192F; font-weight: 700; text-decoration: none; font-size: 17px; margin-top: 30px; padding: 14px 30px; border-radius: 50px; transition: all 0.3s ease; }
-    .button.contact:hover { background: #FFFFFF; transform: scale(1.04); }
+    .button.contact:hover { background: #FFFFFF; color: #0A192F; transform: scale(1.04); }
     footer { margin-top: 80px; padding: 20px; font-size: 15px; background: #193154; color: #FFFFFF; }
     .page-title { font-size: 28px; font-weight: 700; margin: 25px 15px 15px; text-shadow: 0 0 8px rgba(0, 191, 255, 0.7); }
     .page-intro { font-size: 17px; color: #cccccc; max-width: 600px; margin: 0 auto 40px; padding: 0 20px; line-height: 1.6; }
@@ -45,7 +21,13 @@
     .portfolio-highlight img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
     .portfolio-highlight p { color: #cccccc; }
     .detailed-services-container { max-width: 650px; margin: 0 auto; padding: 0 20px; text-align: left; }
-    .service-item { border-bottom: 1px solid rgba(0, 191, 255, 0.2); padding: 20px 0; }
+    .service-item {
+        background-color: rgba(25, 49, 84, 0.5); /* <<<<<< AQUÍ ESTÁ EL CAMBIO */
+        border-left: 3px solid #00BFFF; /* <<<<<< AQUÍ ESTÁ EL CAMBIO */
+        border-radius: 8px; /* <<<<<< Y AQUÍ */
+        padding: 20px 25px; /* <<<<<< Y AQUÍ */
+        margin-bottom: 20px; /* <<<<<< Y AQUÍ */
+    }
     .service-item:last-child { border-bottom: none; }
     .service-item h3 { font-size: 20px; color: #FFFFFF; margin-top: 0; margin-bottom: 10px; }
     .service-item p { font-size: 16px; color: #cccccc; margin: 0; line-height: 1.5; }
@@ -56,18 +38,19 @@
 <body>
 
   <a href="index.html" class="logo"> <img src="jango-logo-blanco.png" alt="Logo de JanGo"> </a>
-  <h1 class="page-title">Atrae Más Clientes con una Presencia Digital Profesional</h1>
-  <p class="page-intro"> Si tu negocio no está en internet, estás perdiendo clientes. Te ayudo a crear una vitrina digital atractiva y funcional que inspire confianza y te conecte con tu público. </p>
-  <div class="portfolio-highlight"> <h2>Un Ejemplo de mi Trabajo</h2> <img src="portafolio-pinolly.jpg" alt="Proyecto Pinolly"> <p>Desarrollo del catálogo digital para Pinolly Pastelería, una solución que les permitió organizar sus productos y facilitar el proceso de cotización a sus clientes de forma clara y atractiva.</p> </div>
+  <h1 class="page-title">Atrae M&aacute;s Clientes con una Presencia Digital Profesional</h1>
+  <p class="page-intro"> Si tu negocio no est&aacute; en internet, est&aacute;s perdiendo clientes. Te ayudo a crear una vitrina digital atractiva y funcional que inspire confianza y te conecte con tu p&uacute;blico. </p>
+  <div class="portfolio-highlight"> <h2>Un Ejemplo de mi Trabajo</h2> <img src="portafolio-pinolly.jpg" alt="Proyecto Pinolly"> <p>Desarrollo del cat&aacute;logo digital para Pinolly Pasteler&iacute;a, una soluci&oacute;n que les permiti&oacute; organizar sus productos y facilitar el proceso de cotizaci&oacute;n a sus clientes de forma clara y atractiva.</p> </div>
   <div class="detailed-services-container">
-    <div class="service-item"> <h3>Diseño y Creación de Sitios Web de Presentación (Landing Pages)</h3> <p>Creamos la primera impresión perfecta para tu marca: una página única, clara y directa que resume quién eres, qué ofreces y cómo pueden contactarte.</p> </div>
-    <div class="service-item"> <h3>Implementación de Catálogos Digitales Interactivos</h3> <p>Mostramos tus productos o servicios de forma organizada y fácil de navegar, permitiendo que tus clientes exploren tus ofertas cómodamente desde cualquier dispositivo.</p> </div>
-    <div class="service-item"> <h3>Configuración de Perfil de Negocio en Google (Google Maps)</h3> <p>Te ponemos en el mapa. Damos de alta y optimizamos tu perfil para que los clientes de tu zona te encuentren cuando busquen tus servicios en Google.</p> </div>
-    <div class="service-item"> <h3>Vinculación con Redes Sociales y Plataformas de Contacto</h3> <p>Conectamos tu sitio web con tus perfiles de WhatsApp, Instagram y Facebook, creando un ecosistema digital que facilita la comunicación con tus clientes.</p> </div>
+    <div class="service-item"> <h3>Dise&ntilde;o y Creaci&oacute;n de Sitios Web de Presentaci&oacute;n (Landing Pages)</h3> <p>Creamos la primera impresi&oacute;n perfecta para tu marca: una p&aacute;gina &uacute;nica, clara y directa que resume qui&eacute;n eres, qu&eacute; ofreces y c&oacute;mo pueden contactarte.</p> </div>
+    <div class="service-item"> <h3>Implementaci&oacute;n de Cat&aacute;logos Digitales Interactivos</h3> <p>Mostramos tus productos o servicios de forma organizada y f&aacute;cil de navegar, permitiendo que tus clientes exploren tus ofertas c&oacute;modamente desde cualquier dispositivo.</p> </div>
+    <div class="service-item"> <h3>Configuraci&oacute;n de Perfil de Negocio en Google (Google Maps)</h3> <p>Te ponemos en el mapa. Damos de alta y optimizamos tu perfil para que los clientes de tu zona te encuentren cuando busquen tus servicios en Google.</p> </div>
+    <div class="service-item"> <h3>Vinculaci&oacute;n con Redes Sociales y Plataformas de Contacto</h3> <p>Conectamos tu sitio web con tus perfiles de WhatsApp, Instagram y Facebook, creando un ecosistema digital que facilita la comunicaci&oacute;n con tus clientes.</p> </div>
   </div>
-  <a href="https://wa.me/573128547299?text=Hola,%20me%20interesa%20el%20servicio%20de%20Presencia%20Web." class="button contact">Impulsa tu Presencia en Línea</a>
-  <a href="index.html" class="back-link">← Volver al inicio</a>
-  <footer> &copy; 2025 JanGo Soluciones Tecnológicas </footer>
+  <a href="https://wa.me/573128547299?text=Hola,%20me%20interesa%20el%20servicio%20de%20Presencia%20Web." class="button contact">Impulsa tu Presencia en L&iacute;nea</a>
+  <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+  <footer> &copy; 2025 JanGo Soluciones Tecnol&oacute;gicas </footer>
+  <script src="//code.tidio.co/9hvfjgbqh7uly7xkcimtxfvebyh6dfee.js" async></script>
 
 </body>
 </html>
