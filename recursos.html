@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursos y Tips Gratuitos | JanGo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 1. FONDO IGUAL AL INDEX */
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: #0A192F; 
+      background: linear-gradient(to right, #0A192F, #193154); 
+      color: #FFFFFF; 
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .logo img {
+      margin-top: 40px;
+      width: 200px;
+    }
+
+    .page-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 25px 15px 10px;
+    }
+
+    .highlight { color: #00BFFF; }
+
+    .subtitle {
+        font-size: 16px;
+        color: #cccccc;
+        margin-bottom: 40px;
+    }
+
+    /* 2. DISEÑO EN CUADRÍCULA (GRID) PARA MEJOR ESTÉTICA */
+    .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px 50px;
+    }
+    
+    .tip-card {
+        background-color: rgba(25, 49, 84, 0.5);
+        border: 1px solid rgba(0, 191, 255, 0.2);
+        border-radius: 15px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column; /* Icono arriba, texto abajo */
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .tip-card:hover {
+        border-color: #00BFFF;
+        transform: translateY(-5px);
+        background-color: rgba(25, 49, 84, 0.8);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .tip-card i {
+        font-size: 30px;
+        color: #00FF7F;
+        margin-bottom: 15px;
+    }
+
+    .tip-info h3 {
+        font-size: 18px;
+        margin: 0 0 8px 0;
+        color: #FFFFFF;
+    }
+
+    .tip-info p {
+        font-size: 14px;
+        color: #cccccc;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .back-link {
+        display: block;
+        margin-bottom: 40px;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: 600;
+        opacity: 0.8;
+    }
+
+    .back-link:hover { opacity: 1; }
+
+    footer {
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(25, 49, 84, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="logo">
+    <img src="jango-logo-blanco.png" alt="Logo de JanGo">
+  </a>
+
+  <h1 class="page-title">Soluciones <span class="highlight">Gratuitas</span></h1>
+  <p class="subtitle">Guías rápidas para optimizar y proteger tu tecnología.</p>
+
+  <div class="tips-grid">
+
+    <a href="tips/acelerar-windows.html" class="tip-card">
+      <i class="fa-solid fa-gauge-high"></i>
+      <div class="tip-info">
+        <h3>Acelerar Windows</h3>
+        <p>Optimiza tu sistema operativo al máximo.</p>
+      </div>
+    </a>
+
+    <a href="tips/limpiar-cache-pc.html" class="tip-card">
+      <i class="fa-solid fa-broom"></i>
+      <div class="tip-info">
+        <h3>Limpiar Caché de PC</h3>
+        <p>Elimina archivos temporales y libera espacio.</p>
+      </div>
+    </a>
+
+    <a href="tips/optimizar-ssd.html" class="tip-card">
+      <i class="fa-solid fa-microchip"></i>
+      <div class="tip-info">
+        <h3>Optimizar Disco SSD</h3>
+        <p>Alarga la vida útil y velocidad de tu disco.</p>
+      </div>
+    </a>
+
+    <a href="tips/error-visual-cpp.html" class="tip-card">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <div class="tip-info">
+        <h3>Error Visual C++</h3>
+        <p>Repara librerías y abre tus programas sin fallos.</p>
+      </div>
+    </a>
+
+    <a href="tips/pantalla-azul-windows.html" class="tip-card">
+      <i class="fa-solid fa-desktop"></i>
+      <div class="tip-info">
+        <h3>Pantallas Azules</h3>
+        <p>Identifica y soluciona errores críticos.</p>
+      </div>
+    </a>
+
+    <a href="tips/seguridad-whatsapp.html" class="tip-card">
+      <i class="fa-brands fa-whatsapp"></i>
+      <div class="tip-info">
+        <h3>Seguridad WhatsApp</h3>
+        <p>Protege tu cuenta contra robos y estafas.</p>
+      </div>
+    </a>
+
+    <a href="tips/adobe-fix-errors.html" class="tip-card">
+      <i class="fa-solid fa-file-pdf"></i>
+      <div class="tip-info">
+        <h3>Errores Adobe</h3>
+        <p>Solución a cierres inesperados en Acrobat.</p>
+      </div>
+    </a>
+
+    <a href="tips/eliminar-malware-de-manera-segura.html" class="tip-card">
+      <i class="fa-solid fa-virus-slash"></i>
+      <div class="tip-info">
+        <h3>Eliminar Malware</h3>
+        <p>Limpia virus y publicidad de tu navegador.</p>
+      </div>
+    </a>
+
+    <a href="tips/verificar-correo-falso.html" class="tip-card">
+      <i class="fa-solid fa-envelope-open-text"></i>
+      <div class="tip-info">
+        <h3>Correos Falsos</h3>
+        <p>Aprende a detectar estafas por e-mail.</p>
+      </div>
+    </a>
+
+    <a href="tips/contrasenas-seguras.html" class="tip-card">
+      <i class="fa-solid fa-key"></i>
+      <div class="tip-info">
+        <h3>Claves Seguras</h3>
+        <p>Crea contraseñas imposibles de hackear.</p>
+      </div>
+    </a>
+
+    <a href="tips/herramientas-ia-productividad.html" class="tip-card">
+      <i class="fa-solid fa-robot"></i>
+      <div class="tip-info">
+        <h3>IA y Productividad</h3>
+        <p>Herramientas de IA para tu negocio.</p>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="index.html" class="back-link">← Volver al inicio</a>
+
+  <footer>
+    &copy; 2026 JanGo Soluciones Tecnológicas
+  </footer>
+
+</body>
+</html>
